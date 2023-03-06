@@ -1,30 +1,45 @@
 import React from "react";
-import {View} from "react-native";
 import styled from "styled-components/native";
 
-
-const TopSmall=styled.View`
-marginTop: 4px;
+const TopSmall = styled.View`
+  margin-top: ${(props) => props.theme.space[1]};
 `;
 
-const TopMedium=styled.View`
-marginTop: 8px;
+const TopMedium = styled.View`
+  margin-top: ${(props) => props.theme.space[2]};
 `;
 
-const TopLarge=styled.View`
-marginTop: 16px;
+const TopLarge = styled.View`
+  margin-top: ${(props) => props.theme.space[3]};
 `;
 
-export const Spacer=({variant})=>{
-    if (variant === "top.medium"){
-        return <TopMedium/>;
-    }
+const LeftSmall = styled.View`
+  margin-left: ${(props) => props.theme.space[1]};
+`;
 
-    if (variant === "top.large"){
-        return <TopLarge/>;
-    }
+const LeftMedium = styled.View`
+  margin-left: ${(props) => props.theme.space[2]};
+`;
 
-    if (variant === "top.medium"){
-        return <TopSmall/>;
-    }
-}
+const LeftLarge = styled.View`
+  margin-left: ${(props) => props.theme.space[3]};
+`;
+
+export const Spacer = ({ variant }) => {
+  if (variant === "top.medium") {
+    return <TopMedium />;
+  }
+  if (variant === "top.large") {
+    return <TopLarge />;
+  }
+  if (variant === "left.small") {
+    return <LeftSmall />;
+  }
+  if (variant === "left.medium") {
+    return <LeftMedium />;
+  }
+  if (variant === "left.large") {
+    return <LeftLarge />;
+  }
+  return <TopSmall />;
+};
