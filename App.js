@@ -1,6 +1,8 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
 import { ThemeProvider } from "styled-components/native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import {
   useFonts as useOswald,
@@ -14,6 +16,8 @@ import {
 
 import { theme } from "./src/infrastructure/theme"
 import { RestaurantsScreen } from "./src/features/restaurants/screens/restaurants.screen.js";
+
+const Tab=createBottomTabNavigator();
 
 export default function App() {
 
@@ -32,7 +36,9 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <RestaurantsScreen />
+        <NavigationContainer>
+          
+        </NavigationContainer>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
