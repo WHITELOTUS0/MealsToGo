@@ -13,9 +13,9 @@ export const RestaurantsContextProvider = ({ children }) => {
         setIsLoading(true);
         setTimeout(()=>{
             restaurantsRequest().then(restaurantsTransform)
-            .then((restaurants)=>{
+            .then((results)=>{
                 setIsLoading(false);
-                setRestaurants(restaurants);
+                setRestaurants(results);
             }).catch(err=>{
                 setIsLoading(false);
                 setError(err);
@@ -30,7 +30,9 @@ export const RestaurantsContextProvider = ({ children }) => {
 
     return (
         <RestaurantsContext.Provider value={{
-            restaurants: [1, 2, 3,4,5,6,7,8],
+            restaurants:restaurants,
+            isLoading,
+            error,
         }}>
             {children}
         </RestaurantsContext.Provider>
