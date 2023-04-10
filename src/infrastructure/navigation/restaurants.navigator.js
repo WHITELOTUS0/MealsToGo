@@ -6,6 +6,8 @@ const RestaurantStack=createStackNavigator();
 
 const RestaurantsNavigator=()=>{
     return(
-        <RestaurantStack.Navigator/>
+        <RestaurantStack.Navigator>
+            <RestaurantStack.Screen/>
+        </RestaurantStack.Navigator>
     );
 }
