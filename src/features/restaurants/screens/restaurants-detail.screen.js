@@ -41,7 +41,11 @@ export const RestaurantsDetailScreen=({route})=>{
             left={(props)=><List.Icon{...props} icon="food-variant"/>}
             expanded={dinnerExpanded}
             onPress={()=>setDinnerExpanded(!dinnerExpanded)}
-            ></List.Accordion>
+            >
+                <List.Item title="Spaghetti Bolognese"/>
+                <List.Item title="Veal Cutlet with Chicken Mushroom"/>
+                <List.Item title="Steak Fries"/>
+            </List.Accordion>
 
             <List.Accordion
             title="Drinks"
