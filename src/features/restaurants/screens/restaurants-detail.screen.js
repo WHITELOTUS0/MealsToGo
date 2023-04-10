@@ -16,6 +16,7 @@ export const RestaurantsDetailScreen=({route})=>{
     return(
         <SafeArea>
             <RestaurantInfoCard restaurant={restaurant}/>
+            <ScrollView>
             <List.Accordion
             title="breakfast"
             left={(props)=><List.Icon{...props} icon="bread-slice"/>}
@@ -60,6 +61,7 @@ export const RestaurantsDetailScreen=({route})=>{
                 <List.Item title="Coke"/>
                 <List.Item title="Fanta"/>
             </List.Accordion>
+            </ScrollView>
         </SafeArea>
     );
 };
