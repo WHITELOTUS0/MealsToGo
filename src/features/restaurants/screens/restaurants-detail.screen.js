@@ -20,7 +20,10 @@ export const RestaurantsDetailScreen=({route})=>{
             left={(props)=><List.Icon{...props} icon="bread-slice"/>}
             expanded={breakfastExpanded}
             onPress={()=>setBreakFastExpanded(!breakfastExpanded)}
-            ></List.Accordion>
+            >
+                <List.Item title="Eggs Benedict"/>
+                <List.Item title="Classic Breakfast"/>
+            </List.Accordion>
 
             <List.Accordion
             title="Lunch"
