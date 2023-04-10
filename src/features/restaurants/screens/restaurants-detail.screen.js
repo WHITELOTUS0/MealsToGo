@@ -15,7 +15,10 @@ export const RestaurantsDetailScreen=({route})=>{
     return(
         <SafeArea>
             <RestaurantInfoCard restaurant={restaurant}/>
-            <List.Accordion></List.Accordion>
+            <List.Accordion
+            title="breakfast"
+            left={(props)=><List.icon{...props} icon="bread-slice"/>}
+            ></List.Accordion>
         </SafeArea>
     );
 };
