@@ -8,8 +8,8 @@ import { SafeArea } from "../../../components/utility/safe-area.component";
 export const RestaurantsDetailScreen=({route})=>{
     const [breakfastExpanded, setBreakFastExpanded]=useState(false);
     const [lunchExpanded, setLunchExpanded]=useState(false);
-    const [dinnerfastExpanded, setDinnerExpanded]=useState(false);
-    const [drinkdfastExpanded, setDrinksExpanded]=useState(false);
+    const [dinnerExpanded, setDinnerExpanded]=useState(false);
+    const [drinksExpanded, setDrinksExpanded]=useState(false);
     const {restaurant}= route.params;
 
     return(
@@ -20,6 +20,27 @@ export const RestaurantsDetailScreen=({route})=>{
             left={(props)=><List.Icon{...props} icon="bread-slice"/>}
             expanded={breakfastExpanded}
             onPress={()=>setBreakFastExpanded(!breakfastExpanded)}
+            ></List.Accordion>
+
+            <List.Accordion
+            title="Lunch"
+            left={(props)=><List.Icon{...props} icon="hamburger"/>}
+            expanded={lunchExpanded}
+            onPress={()=>setLunchExpanded(!lunchExpanded)}
+            ></List.Accordion>
+
+            <List.Accordion
+            title="Dinner"
+            left={(props)=><List.Icon{...props} icon="food-variant"/>}
+            expanded={dinnerExpanded}
+            onPress={()=>setDinnerExpanded(!dinnerExpanded)}
+            ></List.Accordion>
+
+            <List.Accordion
+            title="Drinks"
+            left={(props)=><List.Icon{...props} icon="cup"/>}
+            expanded={drinksExpanded}
+            onPress={()=>setDrinksExpanded(!drinksExpanded)}
             ></List.Accordion>
         </SafeArea>
     );
