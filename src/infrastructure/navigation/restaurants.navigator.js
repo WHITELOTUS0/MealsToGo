@@ -7,7 +7,7 @@ import { RestaurantsScreen } from "../../features/restaurants/screens/restaurant
 
 const RestaurantStack=createStackNavigator();
 
-const RestaurantsNavigator=()=>{
+export const RestaurantsNavigator=()=>{
     return(
         <RestaurantStack.Navigator>
             <RestaurantStack.Screen
