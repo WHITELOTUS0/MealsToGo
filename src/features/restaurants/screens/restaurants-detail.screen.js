@@ -8,6 +8,8 @@ export const RestaurantsDetailScreen=({route})=>{
     const {restaurant}= route.params;
 
     return(
-        <SafeArea></SafeArea>
+        <SafeArea>
+            <RestaurantInfoCard restaurant={restaurant}/>
+        </SafeArea>
     );
 };
