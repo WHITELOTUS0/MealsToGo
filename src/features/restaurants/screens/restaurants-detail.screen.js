@@ -52,7 +52,13 @@ export const RestaurantsDetailScreen=({route})=>{
             left={(props)=><List.Icon{...props} icon="cup"/>}
             expanded={drinksExpanded}
             onPress={()=>setDrinksExpanded(!drinksExpanded)}
-            ></List.Accordion>
+            >
+                <List.Item title="Coffee"/>
+                <List.Item title="Tea"/>
+                <List.Item title="Modelo"/>
+                <List.Item title="Coke"/>
+                <List.Item title="Fanta"/>
+            </List.Accordion>
         </SafeArea>
     );
 };
