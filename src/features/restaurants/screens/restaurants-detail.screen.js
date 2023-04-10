@@ -6,9 +6,9 @@ import { SafeArea } from "../../../components/utility/safe-area.component";
 
 export const RestaurantsDetailScreen=({route})=>{
     const [breakfastExpanded, setBreakFastExpanded]=useState(false);
-    const [lunchExpanded, setLunchFastExpanded]=useState(false);
-    const [dinnerfastExpanded, setDinnerFastExpanded]=useState(false);
-    const [drinkdfastExpanded, setDrinksFastExpanded]=useState(false);
+    const [lunchExpanded, setLunchExpanded]=useState(false);
+    const [dinnerfastExpanded, setDinnerExpanded]=useState(false);
+    const [drinkdfastExpanded, setDrinksExpanded]=useState(false);
     const {restaurant}= route.params;
 
     return(
