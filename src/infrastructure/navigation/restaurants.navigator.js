@@ -1,18 +1,18 @@
 import React from "react";
 
-import {createStackNavigator} from "@react-navigation/stack";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { RestaurantsScreen } from "../../features/restaurants/screens/restaurants.screen";
 
 
-const RestaurantStack=createStackNavigator();
+const RestaurantStack = createNativeStackNavigator();
 
-export const RestaurantsNavigator=()=>{
-    return(
+export const RestaurantsNavigator = () => {
+    return (
         <RestaurantStack.Navigator>
             <RestaurantStack.Screen
-            name="Restaurants"
-            component={RestaurantsScreen}
+                name="Restaurants"
+                component={RestaurantsScreen}
             />
         </RestaurantStack.Navigator>
     );
