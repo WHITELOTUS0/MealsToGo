@@ -15,6 +15,7 @@ export const RestaurantsDetailScreen=({route})=>{
     return(
         <SafeArea>
             <RestaurantInfoCard restaurant={restaurant}/>
+            <List.Accordion></List.Accordion>
         </SafeArea>
     );
 };
