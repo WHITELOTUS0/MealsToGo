@@ -6,4 +6,8 @@ import { SafeArea } from "../../../components/utility/safe-area.component";
 
 export const RestaurantsDetailScreen=({route})=>{
     const {restaurant}= route.params;
+
+    return(
+        <SafeArea></SafeArea>
+    );
 };
