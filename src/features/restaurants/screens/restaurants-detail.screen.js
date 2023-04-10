@@ -17,7 +17,9 @@ export const RestaurantsDetailScreen=({route})=>{
             <RestaurantInfoCard restaurant={restaurant}/>
             <List.Accordion
             title="breakfast"
-            left={(props)=><List.icon{...props} icon="bread-slice"/>}
+            left={(props)=><List.Icon{...props} icon="bread-slice"/>}
+            expanded={breakfastExpanded}
+            onPress={()=>setBreakFastExpanded(!breakfastExpanded)}
             ></List.Accordion>
         </SafeArea>
     );
