@@ -16,6 +16,14 @@ width:100%
 export const MapScreen = () => {
     const {location} = useContext(LocationContext);
     const {restaurants = []} = useContext(RestaurantsContext);
+
+    const [latDelta, setLatDelta]=useState(0);
+
+    useEffect(()=>{
+        const northeastLat=viewPort.northeast.lat;
+        const southwestLat=viewPort.southwest.lat;
+
+    }, [location])
     return(
     <>
 
