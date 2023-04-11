@@ -13,10 +13,10 @@ width:100%
 
 export const MapScreen = () => (
     <>
-        <SafeArea>
-            <Search />
-            <Map />
-        </SafeArea>
+
+        <Search />
+        <Map />
+
     </>
 );
 
