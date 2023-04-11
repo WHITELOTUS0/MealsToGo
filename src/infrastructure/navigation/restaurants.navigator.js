@@ -12,9 +12,9 @@ const RestaurantStack = createStackNavigator();
 
 export const RestaurantsNavigator = () => {
     return (
-        <RestaurantStack.Navigator headerMode="none" screenOptions={{ ...TransitionPresets.RevealFromBottomAndroid }}>
+        <RestaurantStack.Navigator screenOptions={{ ...TransitionPresets.RevealFromBottomAndroid }}>
             <RestaurantStack.Screen
-                name="Restaurants"
+                name="HelloWorld"
                 options={{
                     headerShown: false
                 }}
