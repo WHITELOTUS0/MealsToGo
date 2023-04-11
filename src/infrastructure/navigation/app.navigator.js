@@ -11,7 +11,6 @@ import { RestaurantsNavigator } from "./restaurants.navigator";
 const Tab = createBottomTabNavigator();
 
 const Settings = () => (<SafeArea><Text>Settings</Text></SafeArea>);
-const Map = () => (<SafeArea><Text>Map</Text></SafeArea>);
 
 export const AppNavigator=()=>(
     <NavigationContainer>
