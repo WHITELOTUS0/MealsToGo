@@ -19,19 +19,30 @@ export const MapScreen = () => {
 
     const [latDelta, setLatDelta]=useState(0);
 
-    useEffect(()=>{
-        const northeastLat=viewPort.northeast.lat;
-        const southwestLat=viewPort.southwest.lat;
+    const {lat, lng,viewport} = location;
 
-    }, [location])
+    useEffect(()=>{
+        const northeastLat=viewport.northeast.lat;
+        const southwestLat=viewport.southwest.lat;
+
+        setLatDelta(northeastLat-southwestLat);
+
+    }, [location, viewport])
     return(
     <>
 
         <Search />
-        <Map>
-            {restaurants.map((restaurant)=>{
-                return null;
-            })}
+        <Map
+            region={{
+                latitude:lat,
+                longitude:lng,
+                latitudeDelta:latDelta,
+                longitudeDelta:0.02,
+            }}
+            >
+                {restaurants.map(()=>{
+                    return null;
+                })}
         </Map>
 
     </>
