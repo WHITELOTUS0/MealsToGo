@@ -4,6 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import styled from 'styled-components/native';
 import { SafeArea } from '../../../components/utility/safe-area.component';
 
+import { Search } from '../components/search.component';
 
 const Map = styled(MapView)`
 height:100%;
@@ -12,9 +13,10 @@ width:100%
 
 export const MapScreen = () => (
     <>
-    <SafeArea>
-    <Map/>
-    </SafeArea>
+        <SafeArea>
+            <Search />
+            <Map />
+        </SafeArea>
     </>
 );
 
