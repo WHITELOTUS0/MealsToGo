@@ -5,6 +5,7 @@ import { View } from "react-native";
 
 import { LocationContext } from "../../../services/location/location.context";
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
+import { MapCallout } from "../components/map-callout.component";
 
 import { Search } from "../components/search.component";
 
@@ -51,7 +52,7 @@ export const MapScreen = () => {
                         >
                             <Callout>
                                 <View>
-                                    
+                                    <MapCallout restaurant={restaurant}/>
                                 </View>
                             </Callout>
                         </Marker>
