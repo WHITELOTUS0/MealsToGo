@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
+import {Text} from "../typography/text.component"
 
 
 const CompactImage=styled.Image`
@@ -17,7 +18,10 @@ align-items:center
 export const CompactRestaurantInfo=()=>{
     return(
         <Item>
-            <CompactImage/>
+            <CompactImage source={{uri:restaurantsRequest.photos[0]}} />
+            <Text center variant="caption" numberOfLines={3}>
+                {restaurant.name}
+            </Text>
         </Item>
     )
 }
