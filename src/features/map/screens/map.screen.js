@@ -13,8 +13,6 @@ const Map = styled(MapView)`
   width: 100%;
 `;
 
-const SomeText = styled.Text``;
-
 export const MapScreen = () => {
     const { location } = useContext(LocationContext);
     const { restaurants = [] } = useContext(RestaurantsContext);
@@ -53,7 +51,7 @@ export const MapScreen = () => {
                         >
                             <Callout>
                                 <View>
-                                    <SomeText>{restaurant.name}</SomeText>
+                                    
                                 </View>
                             </Callout>
                         </Marker>
