@@ -1,3 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 
-export const Favourite=()=>null;
+import { FavouritesContext } from "../../services/favourites/favourites.context";
+
+export const Favourite=()=>{
+    const {favourites, addToFavourites, removeFromfavourites}= useContext(FavouritesContext);
+    return (
+        
+    )
+};
