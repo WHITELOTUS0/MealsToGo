@@ -6,18 +6,21 @@ import { TouchableOpacity } from "react-native";
 import { FavouritesContext } from "../../services/favourites/favourites.context";
 
 const FavouriteButton = styled(TouchableOpacity)`
-background-color:transparent;
-border-color:#20232a;
 position:absolute;
 top:10px;
 right:10px;
-width:64px;
 z-index:9;
 `
 
 export const Favourite=()=>{
     const {favourites, addToFavourites, removeFromfavourites}= useContext(FavouritesContext);
     return (
-        
+        <FavouriteButton>
+            <AntDesign 
+            name="heart" 
+            size={24} 
+            color="red"
+             />
+        </FavouriteButton>
     )
 };
