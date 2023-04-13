@@ -7,13 +7,14 @@ import { FavouritesContext } from "../../services/favourites/favourites.context"
 
 const FavouriteButton = styled(TouchableOpacity)`
 position:absolute;
-top:10px;
-right:10px;
+top:25px;
+right:25px;
 z-index:9;
 `
 
-export const Favourite=()=>{
+export const Favourite=({restaurant})=>{
     const {favourites, addToFavourites, removeFromfavourites}= useContext(FavouritesContext);
+    const isFavourite = favourites.find((r)=>r.placeId===restaurant.placeId)
     return (
         <FavouriteButton>
             <AntDesign 
