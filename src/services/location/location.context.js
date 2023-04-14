@@ -12,10 +12,10 @@ export const LocationContextProvider = ({ children }) => {
 
     const onSearch = (searchKeyword) => {
         setIsLoading(true);
-        setKeyword(searchKeyword);     
+        setKeyword(searchKeyword);
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         if (!keyword.length) {
             // don't do anything
             return;
@@ -31,7 +31,7 @@ export const LocationContextProvider = ({ children }) => {
                 setIsLoading(false);
                 setError(err);
             });
-    },[keyword])
+    }, [keyword])
 
     return (
         <LocationContext.Provider
