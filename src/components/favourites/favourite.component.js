@@ -10,7 +10,7 @@ const FavouriteButton = styled(TouchableOpacity)`
 position:absolute;
 top:25px;
 right:25px;
-z-index:9;
+z-index:1;
 `
 
 export const Favourite = ({ restaurant }) => {
