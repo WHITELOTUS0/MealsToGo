@@ -20,6 +20,8 @@ export const Search = () => {
     return (
         <SearchContainer>
             <Searchbar
+                icon="heart"
+                onIconPress={()=>null}
                 placeholder="Search for a location"
                 value={searchKeyword}
                 onSubmitEditing={() => {
