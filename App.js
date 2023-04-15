@@ -5,6 +5,8 @@ import { ThemeProvider } from "styled-components/native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
+import { initializeApp } from 'firebase/app';
+//import * as firebse from "firebase";
 
 import {
   useFonts as useOswald,
