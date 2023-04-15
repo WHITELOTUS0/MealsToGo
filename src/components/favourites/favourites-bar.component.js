@@ -1,6 +1,15 @@
 import React from "react";
-import { Text } from "react-native";
+import { ScrollView } from "react-native";
+import styled from "styled-components/native";
 
-export const FavouritesBar=()=>(
-    <Text>Favourites Bar</Text>
+const FavouritesWrapper=styled.View`
+padding:10px
+`
+
+export const FavouritesBar=({favourites})=>(
+    <FavouritesWrapper>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+
+        </ScrollView>
+    </FavouritesWrapper>
 )
