@@ -1,6 +1,6 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import {AntDesign} from "@expo/vector-icons"
+import { AntDesign } from "@expo/vector-icons"
 import { TouchableOpacity } from "react-native";
 
 import { FavouritesContext } from "../../services/favourites/favourites.context";
@@ -12,16 +12,20 @@ right:25px;
 z-index:9;
 `
 
-export const Favourite=({restaurant})=>{
-    const {favourites, addToFavourites, removeFromfavourites}= useContext(FavouritesContext);
-    const isFavourite = favourites.find((r)=>r.placeId===restaurant.placeId)
+export const Favourite = ({ restaurant }) => {
+    const { favourites, addToFavourites, removeFromfavourites } = useContext(FavouritesContext);
+    const isFavourite = favourites.find((r) => r.placeId === restaurant.placeId);
     return (
-        <FavouriteButton>
-            <AntDesign 
-            name="heart" 
-            size={24} 
-            color="red"
-             />
+        <FavouriteButton
+            onPress={() => !isFavourite ? addToFavourites(resaurant) : removeFromFavourites(resaurant)}
+        >
+            <AntDesign
+                name={
+                    isFavourite ? "heart" : "hearto"
+                }
+                size={24}
+                color={isFavourite ? "red" : "white"}
+            />
         </FavouriteButton>
     )
 };
