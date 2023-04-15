@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useState } from "react";
 import { FlatList,TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 import { ActivityIndicator } from "react-native-paper";
@@ -30,6 +30,7 @@ left:50%;
 export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, restaurants } = useContext(RestaurantsContext);
   const { favourites} = useContext(FavouritesContext);
+  const [isToggled, setIsToggled] = useState(false);
 
   return (
     <SafeArea>
@@ -42,7 +43,7 @@ export const RestaurantsScreen = ({ navigation }) => {
           />
         </LoadingContainer>
       )}
-      <Search />
+      <Search onToggle={()=>setIsToggled(!isToggled)}/>
       <RestaurantList
         data={restaurants}
         renderItem={({ item }) => {
