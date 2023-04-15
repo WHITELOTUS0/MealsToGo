@@ -6,6 +6,15 @@ export const FavouritesContext = createContext();
 export const FavouritesContextProvider = ({ children }) => {
   const [favourites, setFavourites] = useState([]);
 
+  const saveFavourites = async (value) => {
+    try {
+      const jsonValue = JSON.stringify(value)
+      await AsyncStorage.setItem('@storage_Key', jsonValue)
+    } catch (e) {
+      // saving error
+    }
+  }
+
   const add = (restaurant) => {
     setFavourites([...favourites, restaurant]);
   };
