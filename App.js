@@ -27,14 +27,12 @@ import { Navigation } from "./src/infrastructure/navigation";
 import { FavouritesContextProvider } from "./src/services/favourites/favourites.context";
 
 const firebaseConfig = {
-  apiKey: 'api-key',
-  authDomain: 'project-id.firebaseapp.com',
-  databaseURL: 'https://project-id.firebaseio.com',
-  projectId: 'project-id',
-  storageBucket: 'project-id.appspot.com',
-  messagingSenderId: 'sender-id',
-  appId: 'app-id',
-  measurementId: 'G-measurement-id',
+  apiKey: "AIzaSyDPTh7_wGywiyM_3b5hHY32KvATe5VpfNE",
+  authDomain: "mealstogo-8ab13.firebaseapp.com",
+  projectId: "mealstogo-8ab13",
+  storageBucket: "mealstogo-8ab13.appspot.com",
+  messagingSenderId: "617232651916",
+  appId: "1:617232651916:web:c3a91bdf935e9b50994da9"
 };
 
 const firebaseInit = initializeApp(firebaseConfig);
