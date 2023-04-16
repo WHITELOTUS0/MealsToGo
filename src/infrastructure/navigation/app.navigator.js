@@ -1,5 +1,4 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { Text } from "react-native";
@@ -14,7 +13,6 @@ const Tab = createBottomTabNavigator();
 const Settings = () => (<SafeArea><Text>Settings</Text></SafeArea>);
 
 export const AppNavigator = () => (
-  <NavigationContainer>
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
@@ -41,6 +39,6 @@ export const AppNavigator = () => (
       <Tab.Screen name="Map" component={MapScreen} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
-  </NavigationContainer>
+  
 
 );
