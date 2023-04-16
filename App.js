@@ -53,13 +53,15 @@ const Map = () => (<SafeArea><Text>Map</Text></SafeArea>);
 export default function App() {
   const[isAuthenticated, setIsAuthenticated]=useState(false);
   useEffect(()=>{
-    signInWithEmailAndPassword(auth, "email@glorry.io", "password")
+    setTimeout(()=>{
+      signInWithEmailAndPassword(auth, "email@glorry.io", "password")
     .then((user)=>{
       console.log(user);
       setIsAuthenticated(true);
     }).catch((e)=>{
       console.log(e);
     })
+    }, 2000)  
   },[]);
 
   const [oswaldLoaded] = useOswald({
@@ -73,6 +75,8 @@ export default function App() {
   if (!oswaldLoaded || !latoLoaded) {
     return null;
   }
+
+  if(!isAuthenticated) return null;
 
   return (
     <>
