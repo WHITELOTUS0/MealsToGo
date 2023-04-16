@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components/native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { initializeApp } from 'firebase/app';
+import { getApps, initializeApp } from 'firebase/app';
 //import * as firebase from "firebase";
 import {
   getAuth,
@@ -42,6 +42,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
 
 const Tab = createBottomTabNavigator();
 
