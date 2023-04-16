@@ -1,12 +1,17 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import React from "react";
+import React , {useState, useEffect}from "react";
 import { Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { initializeApp } from 'firebase/app';
-//import * as firebse from "firebase";
+//import * as firebase from "firebase";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+} from "firebase/auth"
 
 import {
   useFonts as useOswald,
@@ -35,7 +40,8 @@ const firebaseConfig = {
   appId: "1:617232651916:web:c3a91bdf935e9b50994da9"
 };
 
-const firebaseInit = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 const Tab = createBottomTabNavigator();
 
@@ -44,6 +50,16 @@ const Map = () => (<SafeArea><Text>Map</Text></SafeArea>);
 
 
 export default function App() {
+  const[isAuthenticated, setIsAuthenticated]=useState(false);
+  useEffect(()=>{
+    signInWithEmailAndPassword(auth, "email@glorry.io", "password")
+    .then((user)=>{
+      console.log(user);
+      setIsAuthenticated(true);
+    }).catch((e)=>{
+      console.log(e);
+    })
+  },[]);
 
   const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
