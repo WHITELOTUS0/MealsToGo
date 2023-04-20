@@ -19,7 +19,7 @@ export const AuthenticationContextProvider=({children})=>{
             setIsLoading(false);
         }).catch((e)=>{
             setIsLoading(false);
-            setError(e);
+            setError(e.toString());
         })
     }
 
@@ -27,6 +27,7 @@ export const AuthenticationContextProvider=({children})=>{
         <AuthenticationContext.Provider
         value={{
             user,
+            isAuthenticated:!!user,
             isLoading,
             error,
             onLogin,
