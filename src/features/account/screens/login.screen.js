@@ -1,13 +1,14 @@
 import React,{useState, useContext} from "react";
 
-import { AccountBackground } from "../components/account.styles";
+import { AccountBackground, ErrorContainer } from "../components/account.styles";
 
 import {
     AccountCover,
     AccountContainer,
     AuthButton,
     AuthInput,
-    Title
+    Title,
+    ErrorContainer
   } from "../components/account.styles";
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
@@ -43,9 +44,9 @@ export const LoginScreen = () => {
           />
         </Spacer>
         {error && (
-          <Spacer size="large">
+          <ErrorContainer size="large">
             <Text variant="error">{error}</Text>
-          </Spacer>
+          </ErrorContainer>
         )}
         <Spacer size="large">
           <AuthButton
