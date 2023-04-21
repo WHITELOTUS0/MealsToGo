@@ -57,6 +57,7 @@ export const LoginScreen = () => {
           </AuthButton>
         </Spacer>
       </AccountContainer>
+      <Spacer size="large"></Spacer>
     </AccountBackground>
   )
 };
