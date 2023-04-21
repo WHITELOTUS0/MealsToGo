@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 import { colors } from "../../../infrastructure/theme/colors";
 import { Button,TextInput } from "react-native-paper";
-import { Text } from "react-native";
+import { Text } from "../../../components/typography/text.component";
 
 export const AccountBackground = styled.ImageBackground.attrs({
   source: require("../../../../assets/home_bg.jpg"),
@@ -37,3 +37,11 @@ export const AuthInput = styled(TextInput)`
 export const Title= styled(Text)`
 font-size:30px;
 `
+
+export const ErrorContainer = styled.View`
+  max-width: 300px;
+  align-items: center;
+  align-self: center;
+  margin-top: ${(props) => props.theme.space[2]};
+  margin-bottom: ${(props) => props.theme.space[2]};
+`;
