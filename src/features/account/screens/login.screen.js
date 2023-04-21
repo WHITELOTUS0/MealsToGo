@@ -8,7 +8,6 @@ import {
     AuthButton,
     AuthInput,
     Title,
-    ErrorContainer
   } from "../components/account.styles";
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
@@ -59,7 +58,7 @@ export const LoginScreen = () => {
         </Spacer>
       </AccountContainer>
       <Spacer size="large">
-        <AuthButton mode="contained" onPress={()=>Navigation.goBack()}>
+        <AuthButton mode="contained" onPress={()=>navigation.goBack()}>
           BACK
         </AuthButton>
       </Spacer>
