@@ -49,11 +49,11 @@ export const FavouritesContextProvider = ({ children }) => {
 
     useEffect(() => {
         loadFavourites();
-    }, [])
+    }, [user])
 
     useEffect(() => {
         saveFavourites(favourites);
-    }, [favourites])
+    }, [favourites, user])
 
     return (
         <FavouritesContext.Provider
