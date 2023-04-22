@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect,useContext } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { AuthenticationContext } from "../authentication/authentication.context";
@@ -6,7 +6,7 @@ import { AuthenticationContext } from "../authentication/authentication.context"
 export const FavouritesContext = createContext();
 
 export const FavouritesContextProvider = ({ children }) => {
-    const {user} = useContext(AuthenticationContext);
+    const { user } = useContext(AuthenticationContext);
     const [favourites, setFavourites] = useState([]);
 
     const saveFavourites = async (value) => {
@@ -14,25 +14,25 @@ export const FavouritesContextProvider = ({ children }) => {
             const jsonValue = JSON.stringify(value)
             await AsyncStorage.setItem('favourites', jsonValue)
         } catch (e) {
-            console.log("error storing",e);
+            console.log("error storing", e);
         }
     }
 
 
-    
-const loadFavourites = async () => {
-    try {
-      const value = await AsyncStorage.getItem('favourites')
-      if(value !== null) {
-        // value previously stored
-        setFavourites(JSON.parse(value))
-      }
-    } catch(e) {
-      // error reading value
-      console.log("error loading", e)
+
+    const loadFavourites = async () => {
+        try {
+            const value = await AsyncStorage.getItem('favourites')
+            if (value !== null) {
+                // value previously stored
+                setFavourites(JSON.parse(value))
+            }
+        } catch (e) {
+            // error reading value
+            console.log("error loading", e)
+        }
     }
-  }
-  
+
 
 
     const add = (restaurant) => {
@@ -47,11 +47,11 @@ const loadFavourites = async () => {
         setFavourites(newFavourites);
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         loadFavourites();
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         saveFavourites(favourites);
     }, [favourites])
 
