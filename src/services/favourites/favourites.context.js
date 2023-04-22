@@ -48,13 +48,13 @@ export const FavouritesContextProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        if (user) {
+        if (user && user.uid) {
             loadFavourites(user.uid);
         }
     }, [user])
 
     useEffect(() => {
-        if(user){
+        if(user && user.uid && favourites.length){
         saveFavourites(favourites, user.uid);
         }
     }, [favourites, user])
