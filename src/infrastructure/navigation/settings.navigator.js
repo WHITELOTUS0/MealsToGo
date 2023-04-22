@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { SettingsScreen } from "../../features/settings/screens/settings.screens";
 
 import { createStackNavigator, CardStyleInterpolators } from "@react-navigation/stack";
 
@@ -12,6 +13,7 @@ export const SettingsNavigatsor = ({ route, navigation }) => {
                 cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
             }}
         >
+            <SettingsStack.Screen name="Favourites" component={SettingsScreen}/>
         </SettingsStack.Navigator>
     )
 }
