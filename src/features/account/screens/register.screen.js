@@ -45,7 +45,7 @@ export const RegisterScreen = ({navigation}) => {
         </Spacer>
         <Spacer size="large">
           <AuthInput
-            label="RepeatPassword"
+            label="Repeat Password"
             value={repeatedPassword}
             textContentType="password"
             secureTextEntry
