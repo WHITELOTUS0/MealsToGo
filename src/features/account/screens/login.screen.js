@@ -1,6 +1,5 @@
 import React,{useState, useContext} from "react";
-import { ActivityIndicator } from "react-native-paper";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import { ActivityIndicator, MD2Colors } from "react-native-paper";
 
 import { AccountBackground, ErrorContainer } from "../components/account.styles";
 
@@ -57,7 +56,7 @@ export const LoginScreen = ({navigation}) => {
             LOGIN
           </AuthButton>:
           (
-            <ActivityIndicator animating={true} color={Colors.blue300} />
+            <ActivityIndicator animating={true} color={MD2Colors.blue300} />
           )
           }
         </Spacer>
