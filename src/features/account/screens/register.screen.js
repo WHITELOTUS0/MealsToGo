@@ -59,13 +59,16 @@ export const RegisterScreen = ({navigation}) => {
           </ErrorContainer>
         )}
         <Spacer size="large">
-          <AuthButton
+          {!isLoading ?<AuthButton
             icon="email"
             mode="contained"
             onPress={() => onRegister(email, password, repeatedPassword)}
           >
             REGISTER
           </AuthButton>
+          :(
+            <ActivityIndicator animating={true} color={Colors.blue300}/>
+          )}
         </Spacer>
       </AccountContainer>
       <Spacer size="large">
