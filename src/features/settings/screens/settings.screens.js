@@ -9,6 +9,10 @@ const SettingsItem = styled(List.Item)`
 padding: ${(props)=>props.theme.space[3]}
 `;
 
+const AvatarContainer=styled.View`
+align-items:center;
+`;
+
 export const SettingsScreen = ({ navigation }) => {
   const { onLogout } = useContext(AuthenticationContext);
   return (
