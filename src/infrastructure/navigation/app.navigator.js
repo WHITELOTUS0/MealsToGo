@@ -15,14 +15,6 @@ import { FavouritesContextProvider } from "../../services/favourites/favourites.
 
 const Tab = createBottomTabNavigator();
 
-const Settings = () => {
-  const { onLogout } = useContext(AuthenticationContext);
-  return (
-    <SafeArea>
-      <Text>Settings</Text>
-      <Button title="logout" onPress={() => onLogout()}/>
-    </SafeArea>)
-};
 
 export const AppNavigator = () => (
   <FavouritesContextProvider>
