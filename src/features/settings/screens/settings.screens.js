@@ -3,6 +3,7 @@ import styled from "styled-components/native";
 import { List, Avatar } from "react-native-paper";
 
 import { Text } from "../../../components/typography/text.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
 
