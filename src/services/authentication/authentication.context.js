@@ -2,7 +2,7 @@ import React, {useState, createContext} from "react";
 //import * as firebase from "firebase";
 //import firebase from 'firebase/compat/app';
 //import 'firebase/compat/auth';
-import { createUserWithEmailAndPassword,onAuthStateChanged } from "firebase/auth";
+import { createUserWithEmailAndPassword,onAuthStateChanged,signOut } from "firebase/auth";
 import { auth } from "../../../App";
 
 import { loginRequest } from "./authentication.service";
@@ -48,6 +48,11 @@ export const AuthenticationContextProvider=({children})=>{
             setIsLoading(false);
             setError(e.toString());
         });
+    }
+
+    const onLogout=()=>{
+        setUser(null);
+        signOut(auth);
     }
 
     return(
