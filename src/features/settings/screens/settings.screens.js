@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components/native";
 import { List, Avatar } from "react-native-paper";
 
+import { Text } from "../../../components/typography/text.component";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
 
@@ -14,7 +15,7 @@ align-items:center;
 `;
 
 export const SettingsScreen = ({ navigation }) => {
-  const { onLogout } = useContext(AuthenticationContext);
+  const { onLogout, user } = useContext(AuthenticationContext);
   return (
     <SafeArea>
         <AvatarContainer>
