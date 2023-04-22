@@ -51,7 +51,7 @@ export const RegisterScreen = ({navigation}) => {
           <AuthButton
             icon="lock-open-outline"
             mode="contained"
-            onPress={() => onLogin(email, password)}
+            onPress={() => onRegister(email, password, repeatedPassword)}
           >
             Login
           </AuthButton>
