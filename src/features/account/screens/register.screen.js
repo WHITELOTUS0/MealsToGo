@@ -13,10 +13,11 @@ import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
 
-export const LoginScreen = ({navigation}) => {
+export const RegisterScreen = ({navigation}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { onLogin, error } = useContext(AuthenticationContext);
+    const [repeatedPassword, setRepeatedPassword] = useState("");
+    const { onRegister, error } = useContext(AuthenticationContext);
     
   return (
     <AccountBackground>
