@@ -42,6 +42,16 @@ export const RegisterScreen = ({navigation}) => {
             onChangeText={(p) => setPassword(p)}
           />
         </Spacer>
+        <Spacer size="large">
+          <AuthInput
+            label="RepeatPassword"
+            value={repeatedPassword}
+            textContentType="password"
+            secureTextEntry
+            autoCapitalize="none"
+            onChangeText={(p) => setRepeatedPassword(p)}
+          />
+        </Spacer>
         {error && (
           <ErrorContainer size="large">
             <Text variant="error">{error}</Text>
@@ -49,11 +59,11 @@ export const RegisterScreen = ({navigation}) => {
         )}
         <Spacer size="large">
           <AuthButton
-            icon="lock-open-outline"
+            icon="email"
             mode="contained"
             onPress={() => onRegister(email, password, repeatedPassword)}
           >
-            Login
+            Register
           </AuthButton>
         </Spacer>
       </AccountContainer>
