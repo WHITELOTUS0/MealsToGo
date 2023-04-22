@@ -13,6 +13,7 @@ export const SettingsScreen = ({ navigation }) => {
   const { onLogout } = useContext(AuthenticationContext);
   return (
     <SafeArea>
+        <Avatar.Icon size={180} icon="human"style={{backgroundColor:"#2182BD" }} />
       <List.Section>
         <SettingsItem
           title="Favourites"
