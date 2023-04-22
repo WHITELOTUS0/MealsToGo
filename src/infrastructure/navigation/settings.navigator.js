@@ -10,10 +10,16 @@ export const SettingsNavigator = ({ route, navigation }) => {
         <SettingsStack.Navigator
             headerMode="screen"
             screenOptions={{
-                cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
             }}
         >
-            <SettingsStack.Screen name="Favourites" component={SettingsScreen}/>
+            <SettingsStack.Screen options={{
+                header:()=>null,
+            }}
+            name="Settings1"
+            component={SettingsScreen}
+            />
+            <SettingsStack.Screen name="Favourites" component={()=>null}/>
         </SettingsStack.Navigator>
     )
 }
