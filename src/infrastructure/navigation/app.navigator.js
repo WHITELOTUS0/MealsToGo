@@ -12,6 +12,7 @@ import { AuthenticationContext } from "../../services/authentication/authenticat
 const Tab = createBottomTabNavigator();
 
 const Settings = () => {
+  const { onLogout } = useContext(AuthenticationContext);
   return(
   <SafeArea>
     <Text>Settings</Text>
