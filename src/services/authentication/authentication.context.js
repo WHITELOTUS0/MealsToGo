@@ -2,6 +2,8 @@ import React, {useState, createContext} from "react";
 //import * as firebase from "firebase";
 //import firebase from 'firebase/compat/app';
 //import 'firebase/compat/auth';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../App";
 
 import { loginRequest } from "./authentication.service";
 
@@ -21,6 +23,10 @@ export const AuthenticationContextProvider=({children})=>{
             setIsLoading(false);
             setError(e.toString());
         })
+    }
+
+    const onRegister=(email, password, repeatedPassword)=>{
+        createUserWithEmailAndPassword(auth,email,password);
     }
 
     return(
