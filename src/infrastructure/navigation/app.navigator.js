@@ -16,7 +16,8 @@ const Settings = () => {
   <SafeArea>
     <Text>Settings</Text>
     <Button title="logout" onPress={() => onLogout()}></Button>
-  </SafeArea>)};
+  </SafeArea>)
+  };
 
 export const AppNavigator = () => (
   <Tab.Navigator
