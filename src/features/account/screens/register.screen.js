@@ -63,7 +63,7 @@ export const RegisterScreen = ({navigation}) => {
             mode="contained"
             onPress={() => onRegister(email, password, repeatedPassword)}
           >
-            Register
+            REGISTER
           </AuthButton>
         </Spacer>
       </AccountContainer>
