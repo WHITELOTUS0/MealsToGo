@@ -14,15 +14,12 @@ export const AuthenticationContextProvider=({children})=>{
     const [user, setUser] = useState(null);
     const [error, setError] = useState(null);
 
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/firebase.User
-          const uid = user.uid;
-          // ...
+    onAuthStateChanged(auth, (usr) => {
+        if (usr) {
+         setUser(usr);
+         setIsLoading(false);
         } else {
-          // User is signed out
-          // ...
+          setIsLoading(false);
         }
       });
 
