@@ -23,7 +23,7 @@ export const SettingsScreen = ({ navigation }) => {
         <Avatar.Icon size={180} icon="human"style={{backgroundColor:"#2182BD" }} />
         </AvatarContainer>
         <Spacer position="top" size="large">
-            <Text variant="caption"></Text>
+            <Text variant="caption">{user.email}</Text>
         </Spacer>
       <List.Section>
         <SettingsItem
