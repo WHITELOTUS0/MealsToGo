@@ -21,10 +21,11 @@ export const SettingsScreen = ({ navigation }) => {
     <SafeArea>
         <AvatarContainer>
         <Avatar.Icon size={180} icon="human"style={{backgroundColor:"#2182BD" }} />
-        </AvatarContainer>
         <Spacer position="top" size="large">
             <Text variant="caption">{user.email}</Text>
         </Spacer>
+        </AvatarContainer>
+        
       <List.Section>
         <SettingsItem
           title="Favourites"
