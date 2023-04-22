@@ -54,7 +54,9 @@ export const FavouritesContextProvider = ({ children }) => {
     }, [user])
 
     useEffect(() => {
+        if(user){
         saveFavourites(favourites);
+        }
     }, [favourites, user])
 
     return (
