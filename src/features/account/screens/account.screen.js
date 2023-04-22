@@ -9,6 +9,13 @@ import { AccountBackground, AccountContainer, AccountCover, AuthButton, Title } 
 export const AccountScreen = ({navigation}) => {
   return <AccountBackground >
     <AccountCover/>
+    <LottieView 
+    key="animation"
+    autoPlay
+    loop
+    resizeMode="cover"
+    source={{uri: "../../../../assets/watermelon.json"}}
+    />
     <Title>Meals To Go</Title>
     <AccountContainer>
         <AuthButton
