@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
-
+import styled from "styled-components/native";
 import { List } from "react-native-paper";
 
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
+
+const SettingsItem = styled(List.item)`
+`;
 
 export const SettingsScreen = ({ navigation }) => {
   const { onLogout } = useContext(AuthenticationContext);
