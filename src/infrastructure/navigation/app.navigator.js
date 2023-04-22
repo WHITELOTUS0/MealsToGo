@@ -20,7 +20,7 @@ const Settings = () => {
   return (
     <SafeArea>
       <Text>Settings</Text>
-      <Button title="logout" onPress={() => onLogout()}></Button>
+      <Button title="logout" onPress={() => onLogout()}/>
     </SafeArea>)
 };
 
