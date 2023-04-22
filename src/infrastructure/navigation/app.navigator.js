@@ -7,6 +7,7 @@ import { SafeArea } from "../../components/utility/safe-area.component";
 
 import { RestaurantsNavigator } from "./restaurants.navigator";
 import { MapScreen } from "../../features/map/screens/map.screen";
+import { AuthenticationContext } from "../../services/authentication/authentication.context";
 
 const Tab = createBottomTabNavigator();
 
