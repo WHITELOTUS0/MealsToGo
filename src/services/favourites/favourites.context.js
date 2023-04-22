@@ -20,7 +20,7 @@ export const FavouritesContextProvider = ({ children }) => {
 
 
 
-    const loadFavourites = async () => {
+    const loadFavourites = async (uid) => {
         try {
             const value = await AsyncStorage.getItem('favourites-${uid}')
             if (value !== null) {
