@@ -9,6 +9,8 @@ export const SettingsScreen = () => {
     const { onLogout } = useContext(AuthenticationContext);
     return (
       <SafeArea>
-
+        <List.Section>
+            
+        </List.Section>
       </SafeArea>)
   };
