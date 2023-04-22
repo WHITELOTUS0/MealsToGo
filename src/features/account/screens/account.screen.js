@@ -14,7 +14,7 @@ export const AccountScreen = ({navigation}) => {
     autoPlay
     loop
     resizeMode="cover"
-    source={{uri: "../../../../assets/watermelon.json"}}
+    source={require("../../../../assets/watermelon.json")}
     />
     <Title>Meals To Go</Title>
     <AccountContainer>
