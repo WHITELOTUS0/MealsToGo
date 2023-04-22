@@ -1,4 +1,5 @@
 import React,{useState, useContext} from "react";
+import { ActivityIndicator, Colors } from "react-native-paper";
 
 import { AccountBackground, ErrorContainer } from "../components/account.styles";
 
@@ -17,7 +18,7 @@ export const RegisterScreen = ({navigation}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [repeatedPassword, setRepeatedPassword] = useState("");
-    const { onRegister, error } = useContext(AuthenticationContext);
+    const { onRegister,isLoading, error } = useContext(AuthenticationContext);
     
   return (
     <AccountBackground>
