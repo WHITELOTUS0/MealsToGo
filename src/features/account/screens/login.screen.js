@@ -52,7 +52,7 @@ export const LoginScreen = ({navigation}) => {
             mode="contained"
             onPress={() => onLogin(email, password)}
           >
-            Login
+            LOGIN
           </AuthButton>
         </Spacer>
       </AccountContainer>
