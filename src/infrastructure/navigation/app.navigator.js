@@ -13,6 +13,7 @@ const Tab = createBottomTabNavigator();
 const Settings = () => (
   <SafeArea>
     <Text>Settings</Text>
+    <Button title="logout" onPress={() => onLogout()}></Button>
   </SafeArea>);
 
 export const AppNavigator = () => (
