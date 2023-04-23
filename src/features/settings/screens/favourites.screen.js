@@ -7,6 +7,7 @@ import { RestaurantsContext } from "../../../services/restaurants/restaurants.co
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Text } from "../../../components/typography/text.component";
 
+
 import { RestaurantList } from "../../restaurants/components/restaurant-list.styles";
 
 const NoFavouritesArea=styled(SafeArea)`
@@ -14,7 +15,7 @@ align-items:center;
 justify-content:center;
 `
 
-export const FavouritesScreen=()=>{
+export const FavouritesScreen=({navigation})=>{
     const {favourites} = useContext(FavouritesContext);
     const {restaurants} = useContext(RestaurantsContext);
     return favourites.length?
