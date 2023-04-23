@@ -31,7 +31,6 @@ export const RestaurantsScreen = ({ navigation }) => {
 
   return (
     <SafeArea>
-      <FadeInView>
       {isLoading && (
         <LoadingContainer>
           <Loading
@@ -60,7 +59,6 @@ export const RestaurantsScreen = ({ navigation }) => {
         }}
         keyExtractor={(item) => item.name}
       />
-      </FadeInView>
     </SafeArea>
   )
 };
