@@ -7,8 +7,10 @@ import { Text } from "../../../components/typography/text.component";
 export const FavouritesScreen=()=>{
     const {favourites} = useContext(FavouritesContext);
     return favourites.length?
-    ():
+    null:
     (
-        <SafeArea></SafeArea>
+        <SafeArea style={{alignItems:"center", justifyContent:"center"}}>
+        <Text center>No favourites yet</Text>
+        </SafeArea>
     );
 };
