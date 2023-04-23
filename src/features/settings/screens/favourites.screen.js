@@ -4,5 +4,7 @@ import { FavouritesContext } from "../../../services/favourites/favourites.conte
 
 export const FavouritesScreen=()=>{
     const {favourites} = useContext(FavouritesContext);
-    return favourites.length?():();
+    return favourites.length?
+    ():
+    ();
 };
