@@ -17,7 +17,7 @@ export const FavouritesScreen=()=>{
     return favourites.length?
     (
         <SafeArea>
-
+            <RestaurantList></RestaurantList>
         </SafeArea>
     ):
     (
