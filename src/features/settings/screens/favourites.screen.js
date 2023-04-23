@@ -6,5 +6,7 @@ export const FavouritesScreen=()=>{
     const {favourites} = useContext(FavouritesContext);
     return favourites.length?
     ():
-    ();
+    (
+        <SafeArea>
+    );
 };
