@@ -17,7 +17,19 @@ export const FavouritesScreen=()=>{
     return favourites.length?
     (
         <SafeArea>
-            <RestaurantList></RestaurantList>
+               <RestaurantList
+        data={restaurants}
+        renderItem={({ item }) => {
+          return (
+            <TouchableOpacity onPress={() => navigation.navigate("RestaurantDetail", { restaurant: item })} >
+              <Spacer position="bottom" size="large">
+                <RestaurantInfoCard restaurant={item} />
+              </Spacer>
+            </TouchableOpacity>
+          )
+        }}
+        keyExtractor={(item) => item.name}
+      />
         </SafeArea>
     ):
     (
