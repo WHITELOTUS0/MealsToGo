@@ -19,7 +19,7 @@ export const SettingsNavigator = ({ route, navigation }) => {
             name="Settings1"
             component={SettingsScreen}
             />
-            <SettingsStack.Screen name="Favourites" component={()=>null}/>
+            <SettingsStack.Screen name="Favourites" component={FavouritesScreen}/>
         </SettingsStack.Navigator>
     )
 }
