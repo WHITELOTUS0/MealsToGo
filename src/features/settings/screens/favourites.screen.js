@@ -5,6 +5,9 @@ import { FavouritesContext } from "../../../services/favourites/favourites.conte
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Text } from "../../../components/typography/text.component";
 
+const FavouritesArea=styled(SafeArea)`
+`
+
 export const FavouritesScreen=()=>{
     const {favourites} = useContext(FavouritesContext);
     return favourites.length?
