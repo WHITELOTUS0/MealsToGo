@@ -4,6 +4,7 @@ import styled from "styled-components/native";
 import { ActivityIndicator } from "react-native-paper";
 
 import { SafeArea } from "../../../components/utility/safe-area.component";
+import { FadeInView } from "../../../components/animations/fade.animation";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { FavouritesBar } from "../../../components/favourites/favourites-bar.component";
@@ -30,6 +31,7 @@ export const RestaurantsScreen = ({ navigation }) => {
 
   return (
     <SafeArea>
+      <FadeInView>
       {isLoading && (
         <LoadingContainer>
           <Loading
@@ -58,6 +60,7 @@ export const RestaurantsScreen = ({ navigation }) => {
         }}
         keyExtractor={(item) => item.name}
       />
+      </FadeInView>
     </SafeArea>
   )
 };
