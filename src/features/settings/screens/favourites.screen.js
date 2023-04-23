@@ -9,6 +9,7 @@ import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 
 import { RestaurantList } from "../../restaurants/components/restaurant-list.styles";
+import { RestaurantInfoCard } from "../../restaurants/components/restaurant-info-card.component";
 
 const NoFavouritesArea=styled(SafeArea)`
 align-items:center;
