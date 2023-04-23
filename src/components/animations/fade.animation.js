@@ -5,7 +5,9 @@ export const FadeInView=({duration=1500, ...props})=>{
     const fadeAnim = useRef(new Animated.Value(0)).current;
 
     useEffect(()=>{
-        
+        Animated.timing(fadeAnim, {
+            
+        })
     })
     return(
         <Animated.View
