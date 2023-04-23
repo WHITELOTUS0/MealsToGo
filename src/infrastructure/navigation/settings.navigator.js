@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { SettingsScreen } from "../../features/settings/screens/settings.screens";
+import { FavouritesScreen } from "../../features/settings/screens/favourites.screen";
 
 import { createStackNavigator, CardStyleInterpolators } from "@react-navigation/stack";
 
