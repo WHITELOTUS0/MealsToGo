@@ -15,7 +15,7 @@ export const FavouritesScreen=()=>{
     return favourites.length?
     null:
     (
-        <SafeArea style={{alignItems:"center", justifyContent:"center"}}>
+        <SafeArea >
         <Text center>No favourites yet</Text>
         </SafeArea>
     );
