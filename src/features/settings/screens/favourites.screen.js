@@ -16,6 +16,7 @@ justify-content:center;
 
 export const FavouritesScreen=()=>{
     const {favourites} = useContext(FavouritesContext);
+    const {restaurants} = useContext(RestaurantsContext);
     return favourites.length?
     (
         <SafeArea>
