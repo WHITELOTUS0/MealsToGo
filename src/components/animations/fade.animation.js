@@ -9,8 +9,8 @@ export const FadeInView=({duration=1500, ...props})=>{
             toValue:1,
             duration:duration,
             useNativeDriver:true,
-        })
-    })
+        }).start();
+    }, [fadeAnim])
     return(
         <Animated.View
         style={[
