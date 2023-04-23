@@ -3,6 +3,7 @@ import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 
 import { FavouritesContext } from "../../../services/favourites/favourites.context";
+import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Text } from "../../../components/typography/text.component";
 
