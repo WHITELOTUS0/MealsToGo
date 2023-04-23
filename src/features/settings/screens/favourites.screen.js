@@ -18,12 +18,11 @@ justify-content:center;
 
 export const FavouritesScreen=({navigation})=>{
     const {favourites} = useContext(FavouritesContext);
-    const {restaurants} = useContext(RestaurantsContext);
     return favourites.length?
     (
         <SafeArea>
                <RestaurantList
-        data={restaurants}
+        data={favourites}
         renderItem={({ item }) => {
           return (
             <TouchableOpacity onPress={() => navigation.navigate("RestaurantDetail", { restaurant: item })} >
