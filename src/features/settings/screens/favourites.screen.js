@@ -5,7 +5,7 @@ import { FavouritesContext } from "../../../services/favourites/favourites.conte
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Text } from "../../../components/typography/text.component";
 
-const FavouritesArea=styled(SafeArea)`
+const NoFavouritesArea=styled(SafeArea)`
 align-items:center;
 justify-content:center;
 `
@@ -13,10 +13,12 @@ justify-content:center;
 export const FavouritesScreen=()=>{
     const {favourites} = useContext(FavouritesContext);
     return favourites.length?
-    null:
     (
-        <FavouritesArea >
+        <SafeArea></SafeArea>
+    ):
+    (
+        <NoFavouritesArea >
         <Text center>No favourites yet</Text>
-        </FavouritesArea>
+        </NoFavouritesArea>
     );
 };
