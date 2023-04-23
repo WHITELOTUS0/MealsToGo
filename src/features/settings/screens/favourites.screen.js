@@ -1,3 +1,3 @@
 import React from "react";
 
-export const FavouritesScreen=()=>()
+export const FavouritesScreen=()=>null;
