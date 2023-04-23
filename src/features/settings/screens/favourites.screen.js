@@ -15,8 +15,8 @@ export const FavouritesScreen=()=>{
     return favourites.length?
     null:
     (
-        <SafeArea >
+        <FavouritesArea >
         <Text center>No favourites yet</Text>
-        </SafeArea>
+        </FavouritesArea>
     );
 };
