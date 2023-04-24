@@ -82,7 +82,7 @@ export default function App() {
 // import firebase from 'firebase/compat/app';
 // import 'firebase/compat/auth';
  
-// if (firebase.apps.length === 0) {
+
 
 
 
