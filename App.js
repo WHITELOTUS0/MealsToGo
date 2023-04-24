@@ -84,7 +84,7 @@ export default function App() {
  
 // if (firebase.apps.length === 0) {
 //   firebase.initializeApp(firebaseConfig);
-// } else {
+
 
 
  
