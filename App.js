@@ -83,7 +83,7 @@ export default function App() {
 // import 'firebase/compat/auth';
  
 // if (firebase.apps.length === 0) {
-//   firebase.initializeApp(firebaseConfig);
+
 
 
 
