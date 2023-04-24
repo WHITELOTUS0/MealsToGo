@@ -79,7 +79,7 @@ export default function App() {
 
 // adb shell input keyevent 82 -> dev menu
 
-p';
+
 
  
 
