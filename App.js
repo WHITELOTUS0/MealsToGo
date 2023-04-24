@@ -88,4 +88,3 @@ export default function App() {
 //   firebase.app();
 // }
  
-// const auth = firebase.auth();
