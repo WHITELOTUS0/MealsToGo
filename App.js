@@ -4,7 +4,7 @@ import { Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { initializeApp } from "firebase/app";
-import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 import {
   useFonts as useOswald,
@@ -43,7 +43,7 @@ export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   useEffect(() => {
     setTimeout(() => {
-      signInWithEmailAndPassword(auth,"email@glorry.io", "password")
+      signInWithEmailAndPassword(auth, "email@glorry.io", "password")
         .then((user) => {
           console.log(user);
           setIsAuthenticated(true);
@@ -69,7 +69,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <AuthenticationContextProvider>
-                < Navigation />    
+          < Navigation />
         </AuthenticationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
@@ -81,10 +81,10 @@ export default function App() {
 
 
 
- 
 
 
 
 
 
- 
+
+
