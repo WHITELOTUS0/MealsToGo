@@ -32,6 +32,7 @@ export const CameraScreen = () => {
         ref={(camera) => (cameraRef.current = camera)}
         type={Camera.Constants.Type.front}
         >
+            <TouchableOpacity></TouchableOpacity>
     </ProfileCamera>
     )
 };
