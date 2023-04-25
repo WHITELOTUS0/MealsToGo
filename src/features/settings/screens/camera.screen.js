@@ -11,7 +11,11 @@ export const CameraScreen = () => {
     const [hasPersmission, setHasPermission]=useState(null);
     const cameraRef = useRef();
 
-    useEffect(()=>{})
+    useEffect(()=>{
+        (async ()=>{
+            
+        })
+    })
 
     return (<ProfileCamera
         ref={(camera) => (cameraRef.current = camera)}
