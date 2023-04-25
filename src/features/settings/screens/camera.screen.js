@@ -13,7 +13,12 @@ export const CameraScreen = () => {
     const [hasPermission, setHasPermission] = useState(null);
     const cameraRef = useRef();
 
-    const snap= aync ()=>{};
+    const snap = async () => {
+        if(cameraRef){
+            const photo = await cameraRef.current.takePictureAsync();
+            console.log(photo);
+        }
+    };
 
     useEffect(() => {
         (async () => {
