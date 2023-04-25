@@ -19,6 +19,7 @@ align-items:center;
 
 export const SettingsScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
+  const[photo, setPhoto]= useState(null);
 
   const getProfilePicture= async ()=>{
     const photo = await AsyncStorage.getItem(`${user.uid}-photo`)
