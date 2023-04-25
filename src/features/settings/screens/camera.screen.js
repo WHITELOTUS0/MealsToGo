@@ -10,8 +10,9 @@ height:100%
 export const CameraScreen = () => {
     const cameraRef = useRef();
 
-    return <ProfileCamera
+    return (<ProfileCamera
         ref={(camera) => (cameraRef.current = camera)}
         type={Camera.Constants.Type.front}
-        flashMode={FlashMode.on}></ProfileCamera>
+        flashMode={FlashMode.on}>
+        </ProfileCamera>)
 };
