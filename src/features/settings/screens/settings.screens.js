@@ -21,7 +21,7 @@ export const SettingsScreen = ({ navigation }) => {
   return (
     <SafeArea>
       <AvatarContainer>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate("Camera")}>
           <Avatar.Icon size={180} icon="human" style={{ backgroundColor: "#2182BD" }} />
         </TouchableOpacity>
         <Spacer position="top" size="large">
