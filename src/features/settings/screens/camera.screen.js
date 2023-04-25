@@ -35,11 +35,12 @@ export const CameraScreen = () => {
       }
 
     return (
+        <TouchableOpacity onPress={snap}>
     <ProfileCamera
         ref={(camera) => (cameraRef.current = camera)}
         type={Camera.Constants.Type.front}
         >
-            <TouchableOpacity onPress={snap}></TouchableOpacity>
     </ProfileCamera>
+    </TouchableOpacity>
     )
 };
