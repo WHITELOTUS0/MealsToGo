@@ -8,6 +8,7 @@ width:100%;
 height:100%
 `
 export const CameraScreen = () => {
+    const [hasPersmission, setHasPermission]=useState(null);
     const cameraRef = useRef();
 
     return (<ProfileCamera
