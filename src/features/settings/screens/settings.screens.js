@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 import { List, Avatar } from "react-native-paper";
