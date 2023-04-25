@@ -29,7 +29,7 @@ const CameraButton = styled(Button).attrs({
     left: 140px;
  `;
 
-export const CameraScreen = () => {
+export const CameraScreen = ({navigation}) => {
   const [hasPermission, setHasPermission] = useState(null);
   const cameraRef = useRef();
   const {user} = useContext(AuthenticationContext)
@@ -37,7 +37,8 @@ export const CameraScreen = () => {
   const snap = async () => {
     if (cameraRef) {
       const photo = await cameraRef.current.takePictureAsync();
-      AsyncStorage.setItem(`${user.uid}-photo`, photo.uri)
+      AsyncStorage.setItem(`${user.uid}-photo`, photo.uri);
+      navigation.goBack();
     }
   };
 
