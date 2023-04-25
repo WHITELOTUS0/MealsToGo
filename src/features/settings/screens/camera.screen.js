@@ -3,6 +3,8 @@ import { Camera } from "expo-camera";
 import styled from "styled-components/native";
 import { View, TouchableOpacity } from "react-native";
 import { Text } from "../../../components/typography/text.component";
+import { Button } from "react-native-paper";
+import { MD2Colors } from "react-native-paper";
 
 const ProfileCamera = styled(Camera)`
   width: 100%;
@@ -15,6 +17,15 @@ const InnerSnap = styled.View`
   height: 100%;
   z-index: 999;
 `
+const CameraButton = styled(Button).attrs({
+    mode: "contained",
+    icon: "camera",
+    color: "blue"
+ })`
+    position: absolute;
+    top: 525px;
+    left: 140px;
+ `;
 
 export const CameraScreen = () => {
   const [hasPermission, setHasPermission] = useState(null);
@@ -48,6 +59,7 @@ export const CameraScreen = () => {
   >
     <TouchableOpacity onPress={snap}>
       <InnerSnap />
+      <CameraButton onPress={snap} buttonColor={MD2Colors.blue700}>Snap!</CameraButton>
     </TouchableOpacity>
   </ProfileCamera>
   );
