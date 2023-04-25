@@ -4,6 +4,7 @@ import { TouchableOpacity } from "react-native";
 import { List, Avatar } from "react-native-paper";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect } from "@react-navigation/native";
+import { useCallback } from "react";
 
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
@@ -26,9 +27,11 @@ export const SettingsScreen = ({ navigation }) => {
     const photoUri = await AsyncStorage.getItem(`${currentUser.uid}-photo`)
     setPhoto(photoUri);
   }
-  useFocusEffect(() => {
+  useFocusEffect(
+    useCallback(() => {
     getProfilePicture(user);
-  }, [user])
+    }, [user])
+    )
   return (
     <SafeArea>
       <AvatarContainer>
