@@ -21,12 +21,12 @@ export const SettingsScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
   const [photo, setPhoto] = useState(null);
 
-  const getProfilePicture = async () => {
-    const photoUri = await AsyncStorage.getItem(`${user.uid}-photo`)
+  const getProfilePicture = async (currentUser) => {
+    const photoUri = await AsyncStorage.getItem(`${currentUser.uid}-photo`)
     setPhoto(photoUri);
   }
   useEffect(() => {
-    getProfilePicture();
+    getProfilePicture(user);
   }, [user])
   return (
     <SafeArea>
