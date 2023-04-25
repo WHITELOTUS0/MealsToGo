@@ -32,6 +32,7 @@ const CameraButton = styled(Button).attrs({
 export const CameraScreen = () => {
   const [hasPermission, setHasPermission] = useState(null);
   const cameraRef = useRef();
+  const {user} = useContext(AuthenticationContext)
 
   const snap = async () => {
     if (cameraRef) {
