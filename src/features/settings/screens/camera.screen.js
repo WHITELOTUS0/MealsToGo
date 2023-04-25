@@ -6,6 +6,7 @@ import { Text } from "../../../components/typography/text.component";
 import { Button } from "react-native-paper";
 import { MD2Colors } from "react-native-paper";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { AuthenticationContext } from "../../../services/authentication/authentication.context";
 
 const ProfileCamera = styled(Camera)`
   width: 100%;
