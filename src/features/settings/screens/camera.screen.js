@@ -5,6 +5,7 @@ import { View, TouchableOpacity } from "react-native";
 import { Text } from "../../../components/typography/text.component";
 import { Button } from "react-native-paper";
 import { MD2Colors } from "react-native-paper";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const ProfileCamera = styled(Camera)`
   width: 100%;
@@ -34,7 +35,7 @@ export const CameraScreen = () => {
   const snap = async () => {
     if (cameraRef) {
       const photo = await cameraRef.current.takePictureAsync();
-      console.log(photo);
+      AsyncStorage.setItem(`${user.uid}-photo`, photo.uri)
     }
   };
 
