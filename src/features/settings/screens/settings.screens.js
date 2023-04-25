@@ -22,7 +22,7 @@ export const SettingsScreen = ({ navigation }) => {
   const[photo, setPhoto]= useState(null);
 
   const getProfilePicture= async ()=>{
-    const photo = await AsyncStorage.getItem(`${user.uid}-photo`)
+    const photoUri = await AsyncStorage.getItem(`${user.uid}-photo`)
   }
   useEffect(()=>{
 
