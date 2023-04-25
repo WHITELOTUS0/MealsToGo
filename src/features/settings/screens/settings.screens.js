@@ -3,6 +3,7 @@ import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 import { List, Avatar } from "react-native-paper";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useFocusEffect } from "@react-navigation/native";
 
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
@@ -25,7 +26,7 @@ export const SettingsScreen = ({ navigation }) => {
     const photoUri = await AsyncStorage.getItem(`${currentUser.uid}-photo`)
     setPhoto(photoUri);
   }
-  useEffect(() => {
+  useFocusEffect(() => {
     getProfilePicture(user);
   }, [user])
   return (
