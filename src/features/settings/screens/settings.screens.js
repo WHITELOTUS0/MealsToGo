@@ -26,7 +26,7 @@ export const SettingsScreen = ({ navigation }) => {
     setPhoto(photoUri);
   }
   useEffect(()=>{
-
+    getProfilePicture();
   },[user])
   return (
     <SafeArea>
