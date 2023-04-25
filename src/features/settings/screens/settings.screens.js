@@ -20,6 +20,9 @@ align-items:center;
 export const SettingsScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
 
+  const getProfilePicture= async ()=>{
+    
+  }
   useEffect(()=>{
 
   },[user])
