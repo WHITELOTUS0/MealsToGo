@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Camera, FlashMode } from "expo-camera";
 import styled from "styled-components/native";
-import { View } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { Text } from "../../../components/typography/text.component";
 
 
