@@ -13,6 +13,8 @@ export const CameraScreen = () => {
     const [hasPermission, setHasPermission] = useState(null);
     const cameraRef = useRef();
 
+    const snap= aync ()=>{};
+
     useEffect(() => {
         (async () => {
             const { status } = await Camera.requestCameraPermissionsAsync();
