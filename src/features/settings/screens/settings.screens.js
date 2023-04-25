@@ -23,6 +23,7 @@ export const SettingsScreen = ({ navigation }) => {
 
   const getProfilePicture= async ()=>{
     const photoUri = await AsyncStorage.getItem(`${user.uid}-photo`)
+    setPhoto(photoUri);
   }
   useEffect(()=>{
 
