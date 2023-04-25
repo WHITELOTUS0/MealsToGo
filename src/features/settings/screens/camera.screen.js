@@ -13,14 +13,16 @@ export const CameraScreen = () => {
 
     useEffect(() => {
         (async () => {
-            const { status } = await Camera.requestPermissionsAsync();
+            const { status } = await Camera.requestCameraPermissionsAsync();
             setHasPermission(status === "granted");
         })();
     }, [])
 
-    return (<ProfileCamera
+    return (
+    <ProfileCamera
         ref={(camera) => (cameraRef.current = camera)}
         type={Camera.Constants.Type.front}
-        flashMode={FlashMode.on}>
-    </ProfileCamera>)
+        >
+    </ProfileCamera>
+    )
 };
