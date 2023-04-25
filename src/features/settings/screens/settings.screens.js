@@ -19,6 +19,10 @@ align-items:center;
 
 export const SettingsScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
+
+  useEffect(()=>{
+
+  },[user])
   return (
     <SafeArea>
       <AvatarContainer>
