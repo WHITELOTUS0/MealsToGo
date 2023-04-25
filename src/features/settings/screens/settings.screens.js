@@ -21,7 +21,7 @@ export const SettingsScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
 
   const getProfilePicture= async ()=>{
-    
+    const photo = await AsyncStorage.getItem(`${user.uid}-photo`)
   }
   useEffect(()=>{
 
