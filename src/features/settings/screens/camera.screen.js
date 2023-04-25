@@ -8,5 +8,5 @@ width:100%;
 height:100%
 `
 export const CameraScreen= ()=>{
-    return <Camera style={{width:"100%", height:"100%"}}></Camera>
+    return <ProfileCamera></ProfileCamera>
 };
