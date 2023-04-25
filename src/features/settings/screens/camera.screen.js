@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import { Camera, FlashMode } from "expo-camera";
 import styled from "styled-components/native";
 
