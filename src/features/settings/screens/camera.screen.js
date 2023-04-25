@@ -1,5 +1,5 @@
 import React from "react";
-import { Camera } from "expo-camera";
+import { Camera, FlashMode } from "expo-camera";
 import styled from "styled-components/native";
 
 
@@ -8,5 +8,5 @@ width:100%;
 height:100%
 `
 export const CameraScreen= ()=>{
-    return <ProfileCamera></ProfileCamera>
+    return <ProfileCamera type={Camera.Constants.Type.front} flashMode={FlashMode.on}></ProfileCamera>
 };
